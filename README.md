@@ -1,7 +1,4 @@
-<p align="center">
-  ✨ <code>chroma</code><br>
-  lovely color picker made by yours truly
-</p>
+![chroma banner](https://github.com/user-attachments/assets/8336ab06-bcdb-4c3b-876b-7f223f0794aa)
 
 
 <br/><br/>
