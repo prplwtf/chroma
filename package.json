@@ -1,0 +1,22 @@
+{
+  "name": "@prplwtf/chroma",
+  "version": "1.0.0",
+  "description": "lovely color picker",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/prplwtf/chroma.git"
+  },
+  "keywords": [
+    "chroma"
+  ],
+  "author": "Emma (prpl.wtf)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/prplwtf/chroma/issues"
+  },
+  "homepage": "https://github.com/prplwtf/chroma#readme"
+}
