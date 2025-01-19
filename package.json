@@ -2,8 +2,9 @@
   "name": "@prplwtf/chroma",
   "version": "1.0.0",
   "description": "lovely color picker",
+  "type": "module",
   "scripts": {
-    "dev": "vite",
+    "dev": "vite dev/static",
     "build": "vite build",
     "preview": "vite preview",
     "format": "prettier --write \"src/**/*.{js,jsx,ts,tsx}\"",
