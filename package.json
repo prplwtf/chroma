@@ -2,9 +2,12 @@
   "name": "@prplwtf/chroma",
   "version": "1.0.0",
   "description": "lovely color picker",
-  "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "format": "prettier --write .",
+    "format:check": "prettier --check ."
   },
   "repository": {
     "type": "git",
@@ -18,5 +21,12 @@
   "bugs": {
     "url": "https://github.com/prplwtf/chroma/issues"
   },
-  "homepage": "https://github.com/prplwtf/chroma#readme"
+  "homepage": "https://github.com/prplwtf/chroma#readme",
+  "devDependencies": {
+    "prettier": "^3.4.2",
+    "vite": "^6.0.7"
+  },
+  "main": "./dist/chroma.umd.js",
+  "module": "./dist/chroma.js",
+  "unpkg": "./dist/chroma.umd.js"
 }
