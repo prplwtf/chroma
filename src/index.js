@@ -32,6 +32,8 @@ class Chroma {
 
     // Insert label before the input element (instead of prepending to the element)
     this.element.parentNode.insertBefore(label, this.element);
+
+    return this.element;
   }
 }
 
