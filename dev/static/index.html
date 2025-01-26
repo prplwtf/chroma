@@ -1,9 +1,37 @@
 <!DOCTYPE html>
 <head>
   <title>chroma dev</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 </head>
 <body>
+  <h2>
+    <i class="bi bi-eyedropper"></i> chroma
+  </h2>
+  <p>
+    Chroma is a color picker that doesn't cheap out on it's looks<br>
+    you should try it out
+
+    <br><br>
+    <i class="bi bi-arrow-down"></i>
+  </p>
   <input id="example-input"/>
+
+  <br><br>
+
+  <code style="display:block; padding-top: 16px; line-height:16px !important;">
+    import Chroma from '@prplwtf/chroma'<br>
+    <br>
+    const options = {}<br>
+    const instance = new Chroma('#example-input', options);
+  </code>
+
+  <br><br>
+
+  star the <a href="https://github.com/prplwtf/chroma">github repo</a><br>
+  made for <a href="https://minustwelve.hackclub.com">minus-twelve</a> by <a href="https://prpl.wtf">emma</a>
 
   <script type="module">
     import Chroma from '../../src/index.js'
@@ -16,6 +44,9 @@
   <style>
     html {
       background-color: black;
+      color: white;
+      font-family: Inter, Arial, Helvetica, sans-serif;
+      padding-left: 15px;
     }
   </style>
 </body>
