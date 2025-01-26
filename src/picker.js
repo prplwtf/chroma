@@ -31,7 +31,7 @@ export function picker(element) {
   let targetY = 0;
   let lastTimestamp = 0;
   const SPECTRUM_ANIMATION_DURATION = 300; // ms
-  const HUE_ANIMATION_DURATION = 500; // ms
+  const HUE_ANIMATION_DURATION = 600; // ms
   let initialMouseX = 0;
   let initialMouseY = 0;
   let hasMoved = false;
