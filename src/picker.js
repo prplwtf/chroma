@@ -1,4 +1,7 @@
-export function picker(event, element, label) {
+export function picker(element) {
+  if (document.getElementById(`${element.id}-helper`) != null) {
+    return;
+  }
   const container = document.createElement('div');
   element.parentNode.insertBefore(container, element.nextSibling);
   container.id = `${element.id}-helper`;

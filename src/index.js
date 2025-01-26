@@ -1,7 +1,5 @@
-import theme from './theme.js';
 import { picker } from './picker.js';
-
-theme();
+import './chroma.css';
 
 class Chroma {
   static defaults = {
@@ -42,8 +40,8 @@ class Chroma {
       this.element.style.setProperty('--chroma-data-color', this.element.value);
     }
 
-    this.element.addEventListener('click', (e) => {
-      picker(e, this.element, label);
+    this.element.addEventListener('click', () => {
+      picker(this.element);
     });
 
     return [];

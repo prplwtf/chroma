@@ -1,7 +1,7 @@
 {
   "name": "@prplwtf/chroma",
   "version": "1.0.0",
-  "description": "lovely color picker",
+  "description": "yet another color picker",
   "type": "module",
   "scripts": {
     "dev": "vite dev/static",
@@ -18,7 +18,7 @@
     "chroma"
   ],
   "author": "Emma (prpl.wtf)",
-  "license": "MIT",
+  "license": "GPL-3.0-only",
   "bugs": {
     "url": "https://github.com/prplwtf/chroma/issues"
   },
@@ -29,5 +29,8 @@
   },
   "main": "./dist/chroma.umd.js",
   "module": "./dist/chroma.js",
-  "unpkg": "./dist/chroma.umd.js"
+  "unpkg": "./dist/chroma.umd.js",
+  "files": [
+    "dist/*.css"
+  ]  
 }
