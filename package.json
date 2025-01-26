@@ -1,5 +1,5 @@
 {
-  "name": "@prplwtf/chroma",
+  "name": "chromapicker",
   "version": "1.0.0",
   "description": "yet another color picker",
   "type": "module",
@@ -31,6 +31,7 @@
   "module": "./dist/chroma.js",
   "unpkg": "./dist/chroma.umd.js",
   "files": [
-    "dist/*.css"
+    "dist/*",
+    "src/*"
   ]  
 }
