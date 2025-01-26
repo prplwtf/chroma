@@ -4,7 +4,9 @@ import { picker } from './picker.js';
 theme();
 
 class Chroma {
-  static defaults = {};
+  static defaults = {
+    initialColor: '#000000', // Default black if no color specified
+  };
 
   constructor(selector, options = {}) {
     this.element = document.querySelector(selector);
@@ -29,8 +31,19 @@ class Chroma {
     label.setAttribute('for', this.element.id);
     this.element.parentNode.insertBefore(label, this.element);
 
+    // Set initial color if input is empty
+    if (!this.element.value) {
+      this.element.value = this.options.initialColor;
+    }
+
+    // Ensure the color preview is showing on initialization
+    if (this.element.value.match(/^#[0-9A-Fa-f]{6}$/)) {
+      label.style.backgroundColor = this.element.value;
+      this.element.style.setProperty('--chroma-data-color', this.element.value);
+    }
+
     this.element.addEventListener('click', (e) => {
-      picker(e, this.element);
+      picker(e, this.element, label);
     });
 
     return [];

@@ -1,45 +1,97 @@
 function theme() {
-  // Create style element
   const stylesheet = document.createElement('style');
 
-  // Define styles
   const style = `
     [_chroma] {
-      --chroma-input-border-width: 1px;
-      --chroma-input-border-color: black;
-      --chroma-input-border-style: solid;
-      --chroma-input-border-radius: 12px;
-      --chroma-input-height: 20px;
-      --chroma-input-color: black;
-      --chroma-input-padding: 1px;
+      /* chroma data */
+      --chroma-data-color: black;
+      --chroma-data-computedwidth: 120px;
+
+      /* chroma theme */
+      --chroma-theme-background:rgb(221, 221, 221);
+      --chroma-theme-background-hover:rgb(204, 204, 204);
+      --chroma-theme-background-focus:rgb(180, 180, 180);
+      --chroma-theme-border-radius: 10px;
+      --chroma-theme-border-color: white;
+      --chroma-theme-border-style: solid;
+      --chroma-theme-border-width: 3px;
+
+      --chroma-theme-input-color: black;
+      --chroma-theme-input-padding: 1px;
+      --chroma-theme-input-height: 25px;
     }
 
-    input[_chroma="input"],
-    label[_chroma="input"] {
-      border-width: var(--chroma-input-border-width);
-      border-color: var(--chroma-input-border-color);
-      border-style: var(--chroma-input-border-style);
-      padding: var(--chroma-input-padding);
+    [_chroma="input"] {
+      border-width: var(--chroma-theme-border-width);
+      border-color: var(--chroma-theme-border-color);
+      border-style: var(--chroma-theme-border-style);
+      padding: var(--chroma-theme-input-padding);
+      color: var(--chroma-theme-input-color);
     }
 
     input[_chroma="input"] {
-      border-radius: 0px var(--chroma-input-border-radius) var(--chroma-input-border-radius) 0px;
-      height: var(--chroma-input-height);
+      border-radius: 0px var(--chroma-theme-border-radius) var(--chroma-theme-border-radius) 0px;
+      height: var(--chroma-theme-input-height);
+      padding-left: 6px;
+      background-color: var(--chroma-theme-background);
+      transition: background-color .2s, width .3s;
+      width: 
+        calc(
+          var(--chroma-data-computedwidth) /* computed width */
+          - (var(--chroma-theme-border-width) * 3) /* left-right borders */
+          - 25px /* preview width */
+          - (var(--chroma-theme-input-padding) * 4) /* left-right input padding */
+          - 5px /* input padding-left */
+        );
+    }
+
+    input[_chroma="input"]:hover {
+      background-color: var(--chroma-theme-background-hover);
+    }
+
+    input[_chroma="input"]:focus {
+      outline: unset;
+      background-color: var(--chroma-theme-background-focus) !important;
     }
 
     label[_chroma="input"] {
-      border-radius: var(--chroma-input-border-radius) 0px 0px var(--chroma-input-border-radius);
+      border-radius: var(--chroma-theme-border-radius) 0px 0px var(--chroma-theme-border-radius);
       float: left;
-      width: 20px;
-      height: var(--chroma-input-height);
-      background-color: var(--chroma-input-color);
+      width: 25px;
+      height: var(--chroma-theme-input-height);
+      background-color: var(--chroma-data-color);
+      border-right-width: 0px;
+    }
+
+    [_chroma="picker"] {
+      position: absolute;
+      margin-top: 5px;
+      background: var(--chroma-theme-border-color);
+      padding: var(--chroma-theme-picker-padding);
+      border-width: var(--chroma-theme-border-width);
+      border-color: var(--chroma-theme-border-color);
+      border-style: var(--chroma-theme-border-style);
+      border-radius: var(--chroma-theme-border-radius);
+    }
+
+    [_chroma="picker"] div {
+      --chroma-context-border-radius: calc(var(--chroma-theme-border-radius) - (var(--chroma-theme-border-width) / 2));
+      display: flex;
+      gap: var(--chroma-theme-border-width);
+    }
+
+    [_chroma="picker:spectrum"] {
+      border-radius: var(--chroma-context-border-radius) 0px 0px var(--chroma-context-border-radius);
+      cursor: crosshair;
+    }
+
+    [_chroma="picker:hue"] {
+      border-radius: 0px var(--chroma-context-border-radius) var(--chroma-context-border-radius) 0px;
+      cursor: ns-resize;
     }
   `;
 
-  // Set the styles
   stylesheet.textContent = style;
-
-  // Append to head instead of firstChild
   document.head.appendChild(stylesheet);
 }
 
