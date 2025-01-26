@@ -9,6 +9,10 @@ import Chroma from 'chromapicker';
 or
 
 ```html
+<link
+  rel="stylesheet"
+  href="https://unpkg.com/chromapicker@1.0.0/dist/chromapicker.css"
+/>
 <script src="https://unpkg.com/chromapicker@latest/dist/chroma.umd.js"></script>
 ```
 

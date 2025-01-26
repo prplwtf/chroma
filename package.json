@@ -1,6 +1,6 @@
 {
   "name": "chromapicker",
-  "version": "1.0.0",
+  "version": "1.0.0-1",
   "description": "yet another color picker",
   "type": "module",
   "scripts": {
@@ -33,5 +33,5 @@
   "files": [
     "dist/*",
     "src/*"
-  ]  
+  ]
 }
