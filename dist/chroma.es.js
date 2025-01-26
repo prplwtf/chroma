@@ -13,7 +13,7 @@ function J(a) {
   `;
   const u = i.querySelector('[_chroma="picker:spectrum"]'), m = i.querySelector('[_chroma="picker:hue"]');
   let S = !1, A = !1, y = { r: 255, g: 0, b: 0 }, b = 0, h = 0, l = 0, g, w = 0, f = 0, p = 0, k = 0;
-  const O = 300, j = 500;
+  const O = 300, j = 600;
   let F = 0, P = 0, E = !1;
   const x = a.value;
   if (x.match(/^#[0-9A-Fa-f]{6}$/)) {
