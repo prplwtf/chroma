@@ -5,6 +5,11 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link
+    rel="stylesheet"
+    href="https://unpkg.com/chromapicker@latest/dist/chromapicker.css"
+  />
+<script src="https://unpkg.com/chromapicker@latest/dist/chroma.umd.js"></script>
 </head>
 <body>
   <h2>
@@ -21,10 +26,13 @@
 
   <br><br>
 
+  <!-- this is probably the most cursed codeblock ever made, ignore it, it's *fineeee* -->
   <code style="display:block; padding-top: 16px; line-height:16px !important;">
     import Chroma from 'chromapicker'<br>
     <br>
-    const options = {}<br>
+    const options = {<br>
+    <span style="padding-right: 15px"></span>initialColor: '#000000'<br>
+    }<br>
     const instance = new Chroma('#example-input', options);
   </code>
 
@@ -33,9 +41,7 @@
   star the <a href="https://github.com/prplwtf/chroma">github repo</a><br>
   made for <a href="https://minustwelve.hackclub.com">minus-twelve</a> by <a href="https://prpl.wtf">emma</a>
 
-  <script type="module">
-    import Chroma from '../../src/index.js'
-    
+  <script>
     const options = {}
     const instance = new Chroma('#example-input', options);
   </script>
