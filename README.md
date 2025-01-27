@@ -29,10 +29,12 @@ or
 
 ## Preview
 
+[Try it out in your browser](https://chroma.prpl.wtf)
+
 ![](assets/picker.png)
 
 <br>
 <p align="center">
-  © 2025 Emma (prpl.wtf)
+  © 2025 Emma (<a href="https://prpl.wtf">prpl.wtf</a>)
   <br/><br/><img src="https://github.com/user-attachments/assets/e6ff62c3-6d99-4e43-850d-62150706e5dd"/>
 </p>
